@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콘텐츠 프레임</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            line-height: 1.5;
+            padding: 30px;
+        }
+        
+        .content h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #282A35;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        .button {
+            background-color: #04AA6D;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        /* 속성 표 */
+        .properties-search {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .letter-heading {
+            font-size: 32px;
+            margin: 30px 0 20px;
+            color: #282A35;
+        }
+        
+        .properties-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        .properties-table th, .properties-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .properties-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .property-name {
+            color: #04AA6D;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>CSS Reference</h1>
+        
+        <div class="nav-buttons">
+            <a href="#" class="button">← Home</a>
+            <a href="#" class="button">Next →</a>
+        </div>
+        
+        <h2 class="letter-heading">CSS Properties</h2>
+        <input type="text" class="properties-search" placeholder="Search..">
+        
+        <h2 class="letter-heading">A</h2>
+        <table class="properties-table">
+            <tr>
+                <td><a href="#" class="property-name">accent-color</a></td>
+                <td>Specifies an accent color for user-interface controls</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">align-content</a></td>
+                <td>Specifies the alignment between the lines inside a flexible container when the items do not use all available space</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">align-items</a></td>
+                <td>Specifies the alignment for items inside a flexible container</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">align-self</a></td>
+                <td>Specifies the alignment for selected items inside a flexible container</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">all</a></td>
+                <td>Resets all properties (except unicode-bidi and direction)</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">animation</a></td>
+                <td>A shorthand property for all the animation-* properties</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">animation-delay</a></td>
+                <td>Specifies a delay for the start of an animation</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">animation-direction</a></td>
+                <td>Specifies whether an animation should be played forward, backward or in alternate cycles</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">animation-duration</a></td>
+                <td>Specifies how long an animation should take to complete one cycle</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">animation-fill-mode</a></td>
+                <td>Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">animation-iteration-count</a></td>
+                <td>Specifies the number of times an animation should be played</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">animation-name</a></td>
+                <td>Specifies a name for the @keyframes animation</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">animation-play-state</a></td>
+                <td>Specifies whether the animation is running or paused</td>
+            </tr>
+            <tr>
+                <td><a href="#" class="property-name">animation-timing-function</a></td>
+                <td>Specifies the speed curve of an animation</td>
+            </tr>
+        </table>
+
+        <script>
+            // 페이지 로드 시 URL 파라미터 확인
+            window.onload = function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const tech = urlParams.get('tech');
+                const ref = urlParams.get('ref');
+                const property = urlParams.get('property');
+                
+                // 기술 매개변수가 있으면 페이지 내용 업데이트
+                if (tech) {
+                    document.querySelector('h1').textContent = tech.toUpperCase() + " Reference";
+                }
+                
+                // 참조 매개변수가 있으면 페이지 내용 업데이트
+                if (ref) {
+                    document.querySelector('h1').textContent = ref.replace(/_/g, ' ').toUpperCase();
+                }
+                
+                // 속성 매개변수가 있으면 해당 속성에 대한 상세 정보 표시
+                if (property) {
+                    const propertyName = property.replace(/_/g, '-');
+                    document.querySelector('h1').textContent = propertyName + " Property";
+                    
+                    // 예시 코드를 포함한 상세 내용으로 페이지 업데이트
+                    const content = `
+                        <div class="nav-buttons">
+                            <a href="#" class="button">← Home</a>
+                            <a href="#" class="button">Next →</a>
+                        </div>
+                        
+                        <h2>Definition and Usage</h2>
+                        <p>The ${propertyName} property is used to specify the behavior or appearance of an element in CSS.</p>
+                        
+                        <h2>Example</h2>
+                        <div style="background-color: #f1f1f1; padding: 15px; border-radius: 5px;">
+                            <pre style="margin: 0; font-family: Consolas, Monaco, 'Courier New', monospace;">
+div {
+  ${propertyName}: value;
+}
+                            </pre>
+                        </div>
+                        
+                        <h2>Browser Support</h2>
+                        <p>The ${propertyName} property is supported in all major browsers.</p>
+                    `;
+                    
+                    document.querySelector('.content').innerHTML = `<h1>${propertyName} Property</h1>` + content;
+                }
+            };
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상단 프레임</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            line-height: 1.5;
+            overflow: hidden;
+        }
+        
+        /* 상단 네비게이션 바 */
+        .top-nav {
+            display: flex;
+            background-color: white;
+            padding: 10px 16px;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+            color: #282A35;
+        }
+        
+        .logo span {
+            color: #04AA6D;
+        }
+        
+        .logo sup {
+            color: #04AA6D;
+            font-size: 14px;
+        }
+        
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .menu-item {
+            position: relative;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .menu-item:hover {
+            color: #04AA6D;
+        }
+        
+        .search-container {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-box {
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            width: 250px;
+            font-size: 14px;
+        }
+        
+        /* 기술 네비게이션 바 */
+        .tech-nav {
+            display: flex;
+            background-color: #282A35;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        .tech-item {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+        }
+        
+        .tech-item:hover, .tech-item.active {
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 네비게이션 바 -->
+    <nav class="top-nav">
+        <div class="logo">
+            <span>W</span>3<sup>3</sup>
+        </div>
+        <div class="menu">
+            <div class="menu-item">Tutorials</div>
+            <div class="menu-item">Exercises</div>
+            <div class="menu-item">Certificates</div>
+            <div class="menu-item">Services</div>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search...">
+        </div>
+    </nav>
+    
+    <!-- 기술 네비게이션 바 -->
+    <div class="tech-nav">
+        <a href="content.html?tech=html" target="contentFrame" class="tech-item">HTML</a>
+        <a href="content.html?tech=css" target="contentFrame" class="tech-item active">CSS</a>
+        <a href="content.html?tech=javascript" target="contentFrame" class="tech-item">JAVASCRIPT</a>
+        <a href="content.html?tech=sql" target="contentFrame" class="tech-item">SQL</a>
+        <a href="content.html?tech=python" target="contentFrame" class="tech-item">PYTHON</a>
+        <a href="content.html?tech=java" target="contentFrame" class="tech-item">JAVA</a>
+        <a href="content.html?tech=php" target="contentFrame" class="tech-item">PHP</a>
+        <a href="content.html?tech=howto" target="contentFrame" class="tech-item">HOW TO</a>
+        <a href="content.html?tech=w3css" target="contentFrame" class="tech-item">W3.CSS</a>
+        <a href="content.html?tech=c" target="contentFrame" class="tech-item">C</a>
+        <a href="content.html?tech=cpp" target="contentFrame" class="tech-item">C++</a>
+        <a href="content.html?tech=csharp" target="contentFrame" class="tech-item">C#</a>
+        <a href="content.html?tech=bootstrap" target="contentFrame" class="tech-item">BOOTSTRAP</a>
+        <a href="content.html?tech=react" target="contentFrame" class="tech-item">REACT</a>
+        <a href="content.html?tech=mysql" target="contentFrame" class="tech-item">MYSQL</a>
+        <a href="content.html?tech=jquery" target="contentFrame" class="tech-item">JQUERY</a>
+        <a href="content.html?tech=excel" target="contentFrame" class="tech-item">EXCEL</a>
+        <a href="content.html?tech=xml" target="contentFrame" class="tech-item">XML</a>
+        <a href="content.html?tech=django" target="contentFrame" class="tech-item">DJANGO</a>
+    </div>
+</body>
+</html>

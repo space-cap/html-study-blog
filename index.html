@@ -1,334 +1,73 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W3Schools 스타일 웹사이트</title>
+    <title>내 GitHub 페이지</title>
     <style>
-        /* 기본 스타일 */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-        
         body {
-            background-color: #f1f1f1;
-            line-height: 1.5;
-        }
-        
-        /* 상단 네비게이션 바 */
-        .top-nav {
-            display: flex;
-            background-color: white;
-            padding: 10px 16px;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-right: 20px;
-            color: #282A35;
-        }
-        
-        .logo span {
-            color: #04AA6D;
-        }
-        
-        .logo sup {
-            color: #04AA6D;
-            font-size: 14px;
-        }
-        
-        .menu {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .menu-item {
-            position: relative;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        
-        .menu-item:hover {
-            color: #04AA6D;
-        }
-        
-        .search-container {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-        }
-        
-        .search-box {
-            padding: 8px 15px;
-            border: 1px solid #ccc;
-            border-radius: 25px;
-            width: 250px;
-            font-size: 14px;
-        }
-        
-        /* 기술 네비게이션 바 */
-        .tech-nav {
-            display: flex;
-            background-color: #282A35;
-            overflow-x: auto;
-            white-space: nowrap;
-        }
-        
-        .tech-item {
-            color: white;
-            padding: 15px 20px;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 15px;
-        }
-        
-        .tech-item:hover, .tech-item.active {
-            background-color: #04AA6D;
-        }
-        
-        /* 메인 콘텐츠 영역 */
-        .main-container {
-            display: flex;
-            max-width: 1400px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
             margin: 0 auto;
-            background-color: white;
+            padding: 20px;
+            color: #333;
         }
-        
-        /* 사이드바 */
-        .sidebar {
-            width: 220px;
-            background-color: #E7E9EB;
+
+        header {
+            text-align: center;
             padding: 20px 0;
-        }
-        
-        .sidebar-title {
-            background-color: #04AA6D;
-            color: white;
-            padding: 15px;
-            font-size: 20px;
-        }
-        
-        .sidebar-menu {
-            list-style-type: none;
-        }
-        
-        .sidebar-item {
-            padding: 10px 15px;
-            border-bottom: 1px solid #ddd;
-            cursor: pointer;
-        }
-        
-        .sidebar-item:hover {
-            background-color: #ccc;
-        }
-        
-        .sidebar-item.active {
-            background-color: #04AA6D;
-            color: white;
-        }
-        
-        /* 콘텐츠 영역 */
-        .content {
-            flex: 1;
-            padding: 30px;
-        }
-        
-        .content h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-            color: #282A35;
-        }
-        
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-        }
-        
-        .button {
-            background-color: #04AA6D;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        
-        /* 속성 표 */
-        .properties-search {
-            width: 100%;
-            padding: 12px;
-            margin: 20px 0;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        
-        .letter-heading {
-            font-size: 32px;
-            margin: 30px 0 20px;
-            color: #282A35;
-        }
-        
-        .properties-table {
-            width: 100%;
-            border-collapse: collapse;
+            border-bottom: 1px solid #eee;
             margin-bottom: 30px;
         }
-        
-        .properties-table th, .properties-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+
+        h1 {
+            color: #0366d6;
         }
-        
-        .properties-table tr:nth-child(even) {
-            background-color: #f2f2f2;
+
+        .container {
+            background-color: #f6f8fa;
+            padding: 20px;
+            border-radius: 5px;
         }
-        
-        .property-name {
-            color: #04AA6D;
-            text-decoration: none;
-            font-weight: 500;
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
         }
     </style>
 </head>
+
 <body>
-    <!-- 상단 네비게이션 바 -->
-    <nav class="top-nav">
-        <div class="logo">
-            <span>W</span>3<sup>3</sup>
-        </div>
-        <div class="menu">
-            <div class="menu-item">Tutorials</div>
-            <div class="menu-item">Exercises</div>
-            <div class="menu-item">Certificates</div>
-            <div class="menu-item">Services</div>
-        </div>
-        <div class="search-container">
-            <input type="text" class="search-box" placeholder="Search...">
-        </div>
-    </nav>
-    
-    <!-- 기술 네비게이션 바 -->
-    <div class="tech-nav">
-        <a href="#" class="tech-item">HTML</a>
-        <a href="#" class="tech-item active">CSS</a>
-        <a href="#" class="tech-item">JAVASCRIPT</a>
-        <a href="#" class="tech-item">SQL</a>
-        <a href="#" class="tech-item">PYTHON</a>
-        <a href="#" class="tech-item">JAVA</a>
-        <a href="#" class="tech-item">PHP</a>
-        <a href="#" class="tech-item">HOW TO</a>
-        <a href="#" class="tech-item">W3.CSS</a>
-        <a href="#" class="tech-item">C</a>
-        <a href="#" class="tech-item">C++</a>
-        <a href="#" class="tech-item">C#</a>
-        <a href="#" class="tech-item">BOOTSTRAP</a>
-        <a href="#" class="tech-item">REACT</a>
-        <a href="#" class="tech-item">MYSQL</a>
-        <a href="#" class="tech-item">JQUERY</a>
-        <a href="#" class="tech-item">EXCEL</a>
-        <a href="#" class="tech-item">XML</a>
-        <a href="#" class="tech-item">DJANGO</a>
+    <header>
+        <h1>내 첫 GitHub 페이지</h1>
+        <p>GitHub Pages로 쉽게 웹사이트 만들기</p>
+    </header>
+
+    <div class="container">
+        <h2>환영합니다!</h2>
+        <p>이 페이지는 GitHub Pages를 사용하여 만든 웹사이트입니다. HTML, CSS, JavaScript를 사용하여 자유롭게 커스터마이징할 수 있습니다.</p>
+
+        <h3>GitHub Pages의 장점</h3>
+        <ul>
+            <li>무료 호스팅</li>
+            <li>간편한 배포</li>
+            <li>버전 관리 가능</li>
+            <li>사용자 정의 도메인 사용 가능</li>
+        </ul>
+
+        <h3>시작하기</h3>
+        <p>이 HTML 파일을 수정하여 자신만의 콘텐츠를 추가하세요. 더 많은 페이지를 만들거나 CSS를 수정하여 디자인을 변경할 수 있습니다.</p>
+
+        <a href="frameset_main.html"></a>
     </div>
-    
-    <!-- 메인 콘텐츠 영역 -->
-    <div class="main-container">
-        <!-- 사이드바 -->
-        <div class="sidebar">
-            <div class="sidebar-title">CSS References</div>
-            <ul class="sidebar-menu">
-                <li class="sidebar-item active">CSS Reference</li>
-                <li class="sidebar-item">CSS Browser Support</li>
-                <li class="sidebar-item">CSS Selectors</li>
-                <li class="sidebar-item">CSS Combinators</li>
-                <li class="sidebar-item">CSS Pseudo-classes</li>
-                <li class="sidebar-item">CSS Pseudo-elements</li>
-                <li class="sidebar-item">CSS At-rules</li>
-                <li class="sidebar-item">CSS Functions</li>
-                <li class="sidebar-item">CSS Reference Aural</li>
-                <li class="sidebar-item">CSS Web Safe Fonts</li>
-                <li class="sidebar-item">CSS Fallback Fonts</li>
-                <li class="sidebar-item">CSS Animatable</li>
-                <li class="sidebar-item">CSS Units</li>
-                <li class="sidebar-item">CSS PX-EM Converter</li>
-                <li class="sidebar-item">CSS Colors</li>
-                <li class="sidebar-item">CSS Color Values</li>
-                <li class="sidebar-item">CSS Default Values</li>
-                <li class="sidebar-item">CSS Entities</li>
-            </ul>
-            
-            <div class="sidebar-title" style="margin-top: 20px;">CSS Properties</div>
-            <ul class="sidebar-menu">
-                <li class="sidebar-item">accent-color</li>
-                <li class="sidebar-item">align-content</li>
-                <li class="sidebar-item">align-items</li>
-                <li class="sidebar-item">align-self</li>
-                <li class="sidebar-item">all</li>
-                <li class="sidebar-item">animation</li>
-            </ul>
-        </div>
-        
-        <!-- 콘텐츠 영역 -->
-        <div class="content">
-            <h1>CSS Reference</h1>
-            
-            <div class="nav-buttons">
-                <a href="#" class="button">← Home</a>
-                <a href="#" class="button">Next →</a>
-            </div>
-            
-            <h2 class="letter-heading">CSS Properties</h2>
-            <input type="text" class="properties-search" placeholder="Search..">
-            
-            <h2 class="letter-heading">A</h2>
-            <table class="properties-table">
-                <tr>
-                    <td><a href="#" class="property-name">accent-color</a></td>
-                    <td>Specifies an accent color for user-interface controls</td>
-                </tr>
-                <tr>
-                    <td><a href="#" class="property-name">align-content</a></td>
-                    <td>Specifies the alignment between the lines inside a flexible container when the items do not use all available space</td>
-                </tr>
-                <tr>
-                    <td><a href="#" class="property-name">align-items</a></td>
-                    <td>Specifies the alignment for items inside a flexible container</td>
-                </tr>
-                <tr>
-                    <td><a href="#" class="property-name">align-self</a></td>
-                    <td>Specifies the alignment for selected items inside a flexible container</td>
-                </tr>
-                <tr>
-                    <td><a href="#" class="property-name">all</a></td>
-                    <td>Resets all properties (except unicode-bidi and direction)</td>
-                </tr>
-                <tr>
-                    <td><a href="#" class="property-name">animation</a></td>
-                    <td>A shorthand property for all the animation-* properties</td>
-                </tr>
-                <tr>
-                    <td><a href="#" class="property-name">animation-delay</a></td>
-                    <td>Specifies a delay for the start of an animation</td>
-                </tr>
-                <tr>
-                    <td><a href="#" class="property-name">animation-direction</a></td>
-                    <td>Specifies whether an animation should be played forward, backward or in alternate cycles</td>
-                </tr>
-            </table>
-        </div>
-    </div>
+
+    <footer>
+        <p>© 2025 GitHub Pages 예제 | 만든이: 여러분의 이름</p>
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 프레임</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #E7E9EB;
+            line-height: 1.5;
+        }
+        
+        /* 사이드바 */
+        .sidebar {
+            width: 100%;
+            background-color: #E7E9EB;
+            height: 100vh;
+        }
+        
+        .sidebar-title {
+            background-color: #04AA6D;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .sidebar-menu {
+            list-style-type: none;
+        }
+        
+        .sidebar-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .sidebar-item:hover {
+            background-color: #ccc;
+        }
+        
+        .sidebar-item.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        
+        .sidebar-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 사이드바 -->
+    <div class="sidebar">
+        <div class="sidebar-title">CSS References</div>
+        <ul class="sidebar-menu">
+            <li class="sidebar-item active"><a href="content.html?ref=css_reference" target="contentFrame">CSS Reference</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_browser_support" target="contentFrame">CSS Browser Support</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_selectors" target="contentFrame">CSS Selectors</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_combinators" target="contentFrame">CSS Combinators</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_pseudo_classes" target="contentFrame">CSS Pseudo-classes</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_pseudo_elements" target="contentFrame">CSS Pseudo-elements</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_at_rules" target="contentFrame">CSS At-rules</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_functions" target="contentFrame">CSS Functions</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_ref_aural" target="contentFrame">CSS Reference Aural</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_websafe_fonts" target="contentFrame">CSS Web Safe Fonts</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_fallback_fonts" target="contentFrame">CSS Fallback Fonts</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_animatable" target="contentFrame">CSS Animatable</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_units" target="contentFrame">CSS Units</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_pxem" target="contentFrame">CSS PX-EM Converter</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_colors" target="contentFrame">CSS Colors</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_color_values" target="contentFrame">CSS Color Values</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_default_values" target="contentFrame">CSS Default Values</a></li>
+            <li class="sidebar-item"><a href="content.html?ref=css_entities" target="contentFrame">CSS Entities</a></li>
+        </ul>
+        
+        <div class="sidebar-title" style="margin-top: 20px;">CSS Properties</div>
+        <ul class="sidebar-menu">
+            <li class="sidebar-item"><a href="content.html?property=accent_color" target="contentFrame">accent-color</a></li>
+            <li class="sidebar-item"><a href="content.html?property=align_content" target="contentFrame">align-content</a></li>
+            <li class="sidebar-item"><a href="content.html?property=align_items" target="contentFrame">align-items</a></li>
+            <li class="sidebar-item"><a href="content.html?property=align_self" target="contentFrame">align-self</a></li>
+            <li class="sidebar-item"><a href="content.html?property=all" target="contentFrame">all</a></li>
+            <li class="sidebar-item"><a href="content.html?property=animation" target="contentFrame">animation</a></li>
+            <li class="sidebar-item"><a href="content.html?property=animation_delay" target="contentFrame">animation-delay</a></li>
+            <li class="sidebar-item"><a href="content.html?property=animation_direction" target="contentFrame">animation-direction</a></li>
+            <li class="sidebar-item"><a href="content.html?property=animation_duration" target="contentFrame">animation-duration</a></li>
+            <li class="sidebar-item"><a href="content.html?property=animation_fill_mode" target="contentFrame">animation-fill-mode</a></li>
+            <li class="sidebar-item"><a href="content.html?property=animation_iteration_count" target="contentFrame">animation-iteration-count</a></li>
+            <li class="sidebar-item"><a href="content.html?property=animation_name" target="contentFrame">animation-name</a></li>
+        </ul>
+    </div>
+</body>
+</html>
