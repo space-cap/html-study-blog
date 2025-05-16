@@ -45,8 +45,7 @@ body {
 
   </br>
   <h2>HTML 코드 예제3</h2>
-  <pre><code class="language-html">
-</code></pre>
+  <pre><code id="showcode2" class="language-html"></code></pre>
   <script>
     const htmlCode2 = `
     <html>
@@ -58,7 +57,7 @@ body {
       </body>
     </html>
     `.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    document.querySelector('pre code').textContent = htmlCode2;
+    document.getElementById('showcode2').innerHTML = htmlCode;
   </script>
 
 
