@@ -43,6 +43,25 @@ body {
     document.getElementById('showcode').innerHTML = htmlCode;
   </script>
 
+  </br>
+  <h2>HTML 코드 예제</h2>
+  <pre><code class="language-html">
+</code></pre>
+  <script>
+    const htmlCode2 = `
+    <html>
+      <head>
+        <title>Hello</title>
+      </head>
+      <body>
+        <h1>안녕하세요!</h1>
+      </body>
+    </html>
+    `.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    document.querySelector('pre code').textContent = htmlCode2;
+  </script>
+
+
 
 </body>
 
