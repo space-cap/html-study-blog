@@ -26,6 +26,24 @@ body {
   &lt;/div&gt;
     </code></pre>
 
+
+  <h2>HTML 코드 예제2</h2>
+  <pre id="showcode"></pre>
+  <script>
+    const htmlCode = `
+    <html>
+      <head>
+        <title>Hello</title>
+      </head>
+      <body>
+        <h1>안녕하세요!</h1>
+      </body>
+    </html>
+    `.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    document.getElementById('showcode').innerHTML = htmlCode;
+  </script>
+
+
 </body>
 
 </html>
